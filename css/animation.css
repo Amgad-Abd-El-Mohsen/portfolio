@@ -1,0 +1,112 @@
+.dark-mode {
+filter: invert(1) hue-rotate(180deg);
+}
+.icon {
+cursor: pointer;
+display: inline-block;
+}
+#sunIcon {
+display: none;
+}
+header {
+    transform: translateX(-300px);
+    animation: right_animation 1s ease-out forwards;
+    transition: 1s;
+}
+header.open {
+    transform: translateX(0);
+}
+/* ////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////// */
+.preview {
+    animation: preview 1.5s linear 1.9s forwards;
+}
+.loading {
+    animation: load 2s linear forwards;
+}
+.preview .home h3 {
+    opacity: 0;
+    animation: all_animation 1s ease-out 1.9s forwards;
+}
+.preview .home p{
+    opacity: 0;
+    animation: all_animation 1s ease-out  2s forwards;
+}
+.preview .home .view_work,
+.preview .home .get_intouch{
+    opacity: 0;
+animation: all_animation 1s ease-out  2.1s forwards;
+}
+.all_P{
+    opacity: 0;
+    animation: all_animation 1s ease-out  2.2s forwards;
+}
+.right_home .img{
+    opacity: 0;
+    animation: left_animation 1s ease-out  2.3s forwards;
+}
+.animation {
+opacity: 0;
+transition: opacity 2s ease-in-out;
+}
+.animationx {
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+.hidden {
+visibility: hidden;
+opacity: 0;
+transform: translateY(100px);
+}
+.hiddenr {
+visibility: hidden;
+opacity: 0;
+transform: translateX(100px);
+}
+.hiddenl {
+visibility: hidden;
+opacity: 0;
+transform: translateX(-100px);
+}
+.animation.visible {
+visibility: visible;
+opacity: 1;
+transform: translateY(0);
+transition: opacity 1.5s .5s ease, transform 1.5s .5s ease;
+}
+.animationx.visible {
+visibility: visible;
+opacity: 1;
+transform: translateX(0);
+transition: opacity 1.5s .5s ease, transform 1.5s .5s ease;
+}
+.go_top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.go_top.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+}
+/* /////////////////////////////////////////////////////////// */
+@keyframes load {
+    0% { opacity: 1; }
+    99% { opacity: 1; }
+    100% { opacity: 0; display: none;}
+}
+@keyframes preview {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes all_animation {
+    0% {transform: translateY(200px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+@keyframes left_animation {
+    0% {transform: translatex(200px); opacity: 0;}
+    100% {transform: translatex(0); opacity: 1;}
+}
+@keyframes right_animation {
+    0% {transform: translatex(-300px) !important; opacity: 0 ; }
+    100% {transform: translatex(0px) !important; opacity: 1 ;}
+}
